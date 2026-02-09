@@ -4,3 +4,28 @@ body {
     padding: 0;
     text-align: center;
 }
+header {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+header img {
+    height: 100%;
+}
+header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+header ul li {
+    margin: 0 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
