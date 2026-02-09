@@ -1,31 +1,126 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    text-align: center;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 header {
-    height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
 }
+
 header img {
-    height: 100%;
+  height: 130%;
+  width: 100px;
 }
-header ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+
+.nav-links {
+  display: flex;
+  gap: 20px;
 }
-header ul li {
-    margin: 0 15px;
-    font-weight: bold;
-    cursor: pointer;
+.nav-links a {
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+}
+.drawer {
+  position: fixed;
+  top: 72px;
+  right: -300px; /* hidden outside screen */
+  width: 250px;
+  height: calc(100vh - 70px);
+  background: white;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.2);
+  padding: 20px;
+  transition: right 0.3s ease;
+  z-index: 1500;
+}
+
+.drawer.active {
+  right: 0; /* visible slidein */
+}
+ /* drawer items  */
+.drawer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.drawer ul li {
+  margin: 20px 0;
+}
+
+.drawer ul li a {
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+}
+
+.overlay {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  height: calc(100vh - 70px);
+  width: 100%;
+  background: rgba(0,0,0,0.4);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 1400;
+}
+
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.bar form input {
+  padding: 5px 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.cart {
+  position: relative;
+  font-size: 34px;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.badge {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+
+  background: rgb(2, 17, 58);
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+
+  padding: 2px 6px;
+  border-radius: 50%;
+}
+
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
 }
