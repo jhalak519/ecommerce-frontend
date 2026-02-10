@@ -1,8 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   text-align: center;
+  background-color: rgb(216, 175, 253);
 }
 header {
   height: 70px;
@@ -12,6 +17,7 @@ header {
   padding: 0 20px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
   position: sticky;
+  background-color: rgb(179, 105, 248);
 }
 
 header img {
@@ -39,6 +45,7 @@ header img {
   padding: 20px;
   transition: right 0.3s ease;
   z-index: 1500;
+  background-color: rgb(201, 161, 238);
 }
 
 .drawer.active {
@@ -86,8 +93,14 @@ header img {
 .bar form input {
   padding: 5px 10px;
   font-size: 16px;
-  border: 1px solid #ccc;
+  border: none;
   border-radius: 4px;
+  background-color: rgb(210, 165, 252);
+}
+
+.bar form input:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgb(77, 3, 126);    
 }
 .cart {
   position: relative;
@@ -123,4 +136,28 @@ header img {
   .hamburger {
     display: block;
   }
+}
+
+.cta {
+  padding: 50px 20px;
+  background-image: url("https://imgs.search.brave.com/cCqoBlX2dovmvnQM1wm415sytaBJZ5DLYp00HQxlFOo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wbHVz/LnVuc3BsYXNoLmNv/bS9wcmVtaXVtX3Bo/b3RvLTE2ODM4ODcw/NjQyNTUtMWM0Mjhk/MGIzOTM0P2ZtPWpw/ZyZxPTYwJnc9MzAw/MCZpeGxpYj1yYi00/LjEuMCZpeGlkPU0z/d3hNakEzZkRCOE1I/eHpaV0Z5WTJoOE9Y/eDhiMjVzYVc1bEpU/SXdjMmh2Y0hCcGJt/ZDhaVzU4TUh4OE1I/eDhmREE9");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  height: 300px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-shadow: 5px 5px 7px rgba(0,0,0,0.7);
+}
+
+.cta h1 {
+  font-size: 40px;
+  font-weight: bold;
+}
+.cta p {
+  font-size: 24px;
+  font-weight: bold;
 }
